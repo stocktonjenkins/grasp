@@ -1,9 +1,12 @@
 """Hybrid (dense + fulltext) retrieval over the proposition layer.
 
 Propositions are scored by cosine similarity to the query plus
-`lexical_weight * log(1 + fulltext score)` (Eq. 1's lambda). The QA runs use lambda = 0,
-so fulltext keyword hits join the candidate pool with score 0; Table 2 used 0.2. Entities aggregate the scores of the
-propositions that mention them (Eq. 1); passages aggregate them by RankVote (Eq. 2).
+`lexical_weight * log(1 + fulltext score)`. The lexical term is an implementation detail,
+not part of Eq. 1: the QA runs use lexical_weight = 0, so fulltext keyword hits join the
+candidate pool with score 0, while the Table 2 recall runs used 0.2. Entities aggregate the
+scores of the propositions that mention them, dampened by sqrt(1 + degree) (Eq. 1), and
+exact keyword matches on entity names are pooled with them; passages aggregate proposition
+scores by RankVote (Eq. 2).
 """
 
 from __future__ import annotations

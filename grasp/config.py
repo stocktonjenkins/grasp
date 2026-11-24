@@ -26,7 +26,7 @@ class GraspSettings(Strict):
     synthesis: SynthesisMode = "default"
     synthesis_evidence: bool = False
     temperature: float = 0.2
-    lexical_weight: float = 0.0  # Eq. 1 lambda; the paper's QA runs use 0
+    lexical_weight: float = 0.0  # fulltext term added to proposition scores (not in Eq. 1); the paper's QA runs use 0
 
 
 class BaselineSettings(Strict):

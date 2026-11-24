@@ -282,7 +282,7 @@ def main() -> None:
     command.add_argument("--mode", choices=["decomposed", "single"], default="decomposed")
     command.add_argument("--scoring", choices=["rr", "count"], default="rr")
     command.add_argument("--k", type=int, default=5)
-    command.add_argument("--lexical-weight", type=float, default=0.2, help="Eq. 1 lambda (Table 2: 0.2; QA runs: 0).")
+    command.add_argument("--lexical-weight", type=float, default=0.2, help="Fulltext weight in proposition scores (Table 2: 0.2; QA: 0).")
     command.set_defaults(run=run_recall)
 
     args = parser.parse_args()

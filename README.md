@@ -20,7 +20,7 @@ grasp/
   eval/       metrics, runner, LLM judge, success economy (Eq. 3), Table 2 recall
   baselines/  Table 6 baselines and their dense passage index
   prompts/    every prompt sent to the model
-configs/      one file per reported result
+configs/      run configs for Table 1, Table 2, Table 6 and Figure 5
 ```
 
 ## Setup

@@ -1,7 +1,11 @@
 """Success economy C_w (Eq. 3): total tokens per difficulty-weighted correct answer.
 
-Each correct answer is weighted by its surprisal w_i = -log2(r_i), where r_i is the
-fraction of n zero-shot samples of the backbone that answered question i correctly.
+Each correct answer is weighted by its surprisal w_i = -log2(r_i). In the paper, r_i is the
+fraction of n = 10 zero-shot samples (temperature 1) from a difficulty judge that answer
+question i correctly; the main results use the evaluation backbone as the judge, and
+A.3.6 (Table 9) repeats MuSiQue with Claude Sonnet 5. Any non-negative difficulty signal
+can be passed in place of r_i-derived weights; absolute C_w values depend on the judge,
+method rankings did not in our test.
 """
 
 from __future__ import annotations

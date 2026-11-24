@@ -88,11 +88,6 @@ def delete_question_graph(driver: Driver, question_id: str) -> None:
             ).consume()
 
 
-def clear_database(driver: Driver) -> None:
-    with driver.session() as session:
-        session.run("CALL apoc.periodic.iterate('MATCH (n) RETURN n', 'DETACH DELETE n', {batchSize: 10000, parallel: false})").consume()
-
-
 def proposition_id(text: str, question_id: str | None) -> str:
     key = text.strip().lower()
     if question_id:
