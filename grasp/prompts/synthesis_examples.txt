@@ -1,0 +1,114 @@
+# Examples
+
+Research:
+Q: The first President of Namibia.
+A: Sam Nujoma was the first President of Namibia [ID: 1101].
+Q: The successor of Sam Nujoma as President of Namibia.
+A: Sam Nujoma was succeeded by Hifikepunye Pohamba in 2005 [ID: 1109].
+
+Q: Who succeeded the first President of Namibia?
+A: Sam Nujoma was the first President of Namibia and was succeeded by Hifikepunye Pohamba. So the answer is: Hifikepunye Pohamba
+
+---
+
+Research:
+Q: The architect of the Sydney Opera House.
+A: The Sydney Opera House was designed by Jørn Utzon [ID: 3301].
+Q: The city where Jørn Utzon was born.
+A: Jørn Utzon was born in Copenhagen, Denmark [ID: 3308].
+Q: The population of Copenhagen.
+A: Copenhagen has a population of approximately 794,128 [ID: 3315].
+
+Q: What is the population of the city where the architect of the Sydney Opera House was born?
+A: The Sydney Opera House was designed by Jørn Utzon, who was born in Copenhagen. Copenhagen has a population of approximately 794,128. So the answer is: 794,128
+
+---
+
+Research:
+Q: The person who brought Louis XVI style to the French court.
+A: Marie Antoinette is credited with bringing Louis XVI style to the French court [ID: 8801].
+Q: The mother of Marie Antoinette.
+A: The mother of Marie Antoinette was Maria Theresa [ID: 8808].
+Q: The city where Maria Theresa died.
+A: Maria Theresa died in Vienna [ID: 8815].
+Q: When Napoleon occupied Vienna.
+A: Napoleon occupied Vienna in November 1805 [ID: 8822].
+
+Q: When did Napoleon occupy the city where the mother of the woman who brought Louis XVI style to the court died?
+A: Marie Antoinette brought Louis XVI style to court; her mother, Maria Theresa, died in Vienna. Napoleon occupied Vienna in 1805. So the answer is: 1805
+
+---
+
+Research:
+Q: What is Philipsburg capital of?
+A: Philipsburg is the capital of Sint Maarten [ID: 5521].
+Q: Sint Maarten is located on what terrain feature?
+A: Sint Maarten is located on the island of Saint Martin [ID: 5528].
+Q: Who captured Malakoff?
+A: Malakoff was captured by French forces during the Crimean War in 1855 [ID: 5535].
+Q: When did French forces come to the island of Saint Martin?
+A: French forces arrived on the island of Saint Martin in 1648 [ID: 5542].
+
+Q: When did the people who captured Malakoff come to the region where Philipsburg is located?
+A: Philipsburg is the capital of Sint Maarten, on the island of Saint Martin. Malakoff was captured by French forces, who first arrived on Saint Martin in 1648. So the answer is: 1648
+
+---
+
+Research:
+Q: The director of God's Gift to Women.
+A: God's Gift to Women was directed by Michael Curtiz [ID: 7701].
+Q: When was Michael Curtiz born?
+A: Michael Curtiz was born in 1886 [ID: 7708].
+Q: The director of Aldri Annet Enn Bråk.
+A: Aldri Annet Enn Bråk was directed by Edith Carlmar [ID: 7715].
+Q: When was Edith Carlmar born?
+A: Edith Carlmar was born in 1911 [ID: 7722].
+
+Q: Which film has the director who is older, God's Gift to Women or Aldri Annet Enn Bråk?
+A: God's Gift to Women was directed by Michael Curtiz (born 1886) and Aldri Annet Enn Bråk was directed by Edith Carlmar (born 1911). Curtiz is older, so the film with the older director is God's Gift to Women. So the answer is: God's Gift to Women
+
+---
+
+Research:
+Q: The restaurant chain that sells the Baconator sandwich.
+A: The Baconator is a hamburger sold by the fast-food chain Wendy's [ID: 9001].
+Q: The founder of Wendy's.
+A: Wendy's was founded by Dave Thomas on November 15, 1969 [ID: 9002].
+
+Q: The fast-food restaurant chain that sells the Baconator sandwich was founded by who?
+A: The Baconator is sold by Wendy's, which was founded by Dave Thomas. So the answer is: Dave Thomas
+
+---
+
+Research:
+Q: The musical in which Lauren Ward originated the role of Miss Honey.
+A: Lauren Ward originated the role of Miss Honey in Matilda the Musical [ID: 9011].
+Q: When Matilda the Musical had its trial run at the Stratford-upon-Avon theatre.
+A: Matilda the Musical had a twelve-week trial run at Stratford-upon-Avon from November 2010 to January 2011 [ID: 9012].
+
+Q: When did the musical in which Lauren Ward played the role of Miss Honey have its trial run at the Stratford-upon-Avon theatre?
+A: Lauren Ward originated the role of Miss Honey in Matilda the Musical, which had its trial run at Stratford-upon-Avon from November 2010 to January 2011. So the answer is: November 2010 to January 2011
+
+---
+
+Research:
+Q: The year The Civil War documentary premiered.
+A: The Civil War is a 1990 American television documentary miniseries [ID: 9021].
+Q: The year Prince Among Slaves premiered.
+A: Prince Among Slaves is a 2006 historical documentary [ID: 9022].
+
+Q: Which documentary premiered first, The Civil War or Prince Among Slaves?
+A: The Civil War premiered in 1990 and Prince Among Slaves premiered in 2006, so The Civil War premiered first. So the answer is: The Civil War
+
+---
+
+Research:
+Q: The country Hall Bartlett is from.
+A: Hall Bartlett was an American film producer, director, and screenwriter [ID: 9031].
+Q: The country Kamal Haasan is from.
+A: Kamal Haasan is an Indian film actor, director, and screenwriter [ID: 9032].
+
+Q: Which director is from India, Hall Bartlett or Kamal Haasan?
+A: Hall Bartlett is American and Kamal Haasan is Indian, so the director from India is Kamal Haasan. So the answer is: Kamal Haasan
+
+---

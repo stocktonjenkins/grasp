@@ -1,0 +1,7 @@
+dataset: 2wiki
+data: data/2wiki
+model: gemini-3-flash-preview
+embedding_model: gemini-embedding-001
+parallel: 10
+baseline:
+  variant: no_context

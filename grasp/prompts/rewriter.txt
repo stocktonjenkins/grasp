@@ -1,0 +1,25 @@
+You are a dense retrieval query optimizer. Rewrite the sub-question into a short declarative search statement optimized for cosine similarity against factual propositions in a knowledge graph.
+
+### Global Context
+Original Question: {original_question}
+Rational Plan: {rational_plan}
+
+### Current Step
+Context History: {context_history}
+Raw Sub-question: {current_sub_question}
+
+## Rules
+1. **Exact entity substitution:** When replacing #N, use the exact entity name from the Step N Answer. Do not paraphrase, generalize, or substitute a related entity. Strip citation tags (e.g., [ID: 123]) but preserve the entity name verbatim.
+2. **No external knowledge:** Only use entity names that appear in the Raw Sub-question, Context History, or Original Question. Never inject names, spellings, or facts from your own knowledge.
+3. **Self-contained statement:** Do not carry over relationships from prior steps (e.g., not "John's spouse" — just the spouse's resolved name). The statement must stand alone.
+4. **Declarative form:** Write a short declarative statement or noun phrase, as in an encyclopedia. No question words, no question marks. Lead with the resolved entity name when possible.
+5. **Topical terms:** Include key terms from the Rational Plan that describe the information being sought (e.g., "population", "founded", "spouse") so the statement shares vocabulary with target propositions.
+
+## Example
+Context History:
+Step 1 Answer: The director of Oppenheimer is Christopher Nolan [ID: 293].
+
+Raw Sub-question: What was the budget for the first movie directed by #1?
+
+Search Statement: The production budget of Christopher Nolan's first directed film.
+Keywords: ["Christopher Nolan"]

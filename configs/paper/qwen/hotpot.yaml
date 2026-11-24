@@ -1,0 +1,15 @@
+dataset: hotpot
+data: data/hotpot
+model: Qwen/Qwen3-32B
+provider: vllm
+embedding_model: BAAI/bge-large-en-v1.5
+embedding_provider: huggingface
+embedding_dim: 1024
+parallel: 4
+neo4j_dir: .neo4j/hotpot-qwen
+grasp:
+  extraction: batch-joint
+  batch_size: 10
+  index_workers: 8
+  synthesis: fewshot
+  synthesis_evidence: true

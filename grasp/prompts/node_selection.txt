@@ -1,0 +1,16 @@
+Select the most relevant entity nodes to explore from a knowledge graph.
+
+== REASONING CONTEXT ==
+{state_context}
+
+Sub-question: {sub_question}
+Search statement: {search_statement}
+
+Candidate entities:
+{candidates}
+
+Choose one or more entity nodes whose propositions are most likely to contain information that answers the search statement. Select multiple nodes when they are all plausibly relevant (e.g., multiple entities mentioned in the search statement, or when the answer may require combining facts across nodes). Select only one when a single node clearly dominates.
+
+Avoid selecting nodes listed under "Already visited node IDs" — their propositions have already been explored.
+
+Output the node_ids (list of integers) of your selections and brief reasoning.

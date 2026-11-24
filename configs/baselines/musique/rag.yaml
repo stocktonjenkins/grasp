@@ -1,0 +1,10 @@
+dataset: musique
+data: data/musique
+model: gemini-3-flash-preview
+embedding_model: gemini-embedding-001
+parallel: 10
+baseline:
+  variant: retriever
+  index_path: data/dense/musique-corpus
+  top_k: 5
+  global_retrieval: true

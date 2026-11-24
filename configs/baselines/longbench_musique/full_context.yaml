@@ -1,0 +1,5 @@
+dataset: longbench_musique
+model: gemini-3-flash-preview
+parallel: 10
+baseline:
+  variant: with_context

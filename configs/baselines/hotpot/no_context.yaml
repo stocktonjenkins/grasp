@@ -1,0 +1,7 @@
+dataset: hotpot
+data: data/hotpot
+model: gemini-3-flash-preview
+embedding_model: gemini-embedding-001
+parallel: 10
+baseline:
+  variant: no_context

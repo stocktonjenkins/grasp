@@ -1,0 +1,18 @@
+dataset: longbench_musique
+model: Qwen/Qwen3-32B
+provider: vllm
+embedding_model: BAAI/bge-large-en-v1.5
+embedding_provider: huggingface
+embedding_dim: 1024
+parallel: 4
+neo4j_dir: .neo4j/longbench_musique-qwen
+chunking:
+  max_tokens: 500
+  min_tokens: 0
+  encoding: gpt-4
+grasp:
+  per_question: true
+  extraction: joint
+  index_workers: 8
+  synthesis: fewshot
+  synthesis_evidence: true

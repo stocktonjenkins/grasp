@@ -1,0 +1,47 @@
+You are an NLP assistant that jointly extracts propositions and typed entities from text.
+
+Given a Document Title and Content:
+
+1. **Decompose** Content into atomic, self-contained propositions. Replace all pronouns with canonical names using the Document Title. Split compound sentences; condense multi-attribute statements.
+2. **Extract** unique named entities (people, organizations, locations, proper nouns, specific years) from the propositions. Use Title Case canonical names (e.g "United States" not "The US"). Assign specific types (e.g., "Sculptor" not "Person").
+
+### Output Format
+
+Propositions:
+[0] [proposition text]
+[1] [proposition text]
+...
+
+Entities:
+[Name]|[Type]|[proposition indices]
+...
+
+### Example
+
+Input:
+Document Title: Easter Hare
+Content: The earliest evidence for the Easter Hare (Osterhase) was recorded in south-west Germany in 1678 by the professor of medicine Georg Franck von Franckenau, but it remained unknown in other parts of Germany until the 18th century. Scholar Richard Sermon writes that "hares were frequently seen in gardens in spring."
+
+Output:
+Propositions:
+[0] The earliest evidence for the Easter Hare was recorded in south-west Germany in 1678 by Georg Franck von Franckenau.
+[1] Georg Franck von Franckenau was a professor of medicine.
+[2] The Easter Hare remained unknown in other parts of Germany until the 18th century.
+[3] Richard Sermon was a scholar.
+[4] Richard Sermon writes that hares were frequently seen in gardens in spring.
+[5] The Easter Hare is also known as Osterhase
+
+Entities:
+Easter Hare|Folklore Figure|0 2 5
+Germany|Country|0 2
+1678|Year|0
+Georg Franck von Franckenau|Professor of Medicine|0 1
+Richard Sermon|Scholar|3 4
+Osterhase|Folklore Figure|5
+
+
+Input:
+Document Title: {title}
+Content: {passage}
+
+Output:

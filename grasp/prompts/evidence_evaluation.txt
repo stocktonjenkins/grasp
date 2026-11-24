@@ -1,0 +1,47 @@
+You are evaluating evidence gathered from a knowledge graph to determine how to proceed with answering a question.
+
+== CURRENT STATE ==
+{state_block}
+
+== NEW EVIDENCE (this iteration) ==
+{new_evidence}
+{final_iteration_note}
+## Your task
+
+Analyze the new evidence in context of your current state. The visited node groups section summarizes what was learned in prior iterations — use it alongside the new evidence above.
+
+**Critical grounding rules:**
+
+1. **Answer from the evidence, not from memory.** Your answer must be derived from the retrieved evidence and visited-node findings. Do not inject facts that are absent from the evidence. If the evidence says X and your knowledge says Y, the answer is X.
+2. **The best answer in the evidence IS the answer.** If the question asks about a category (e.g., "university," "country," "author") and the evidence contains exactly one entity that fits that category — even if it is not a perfect categorical match — that entity is the answer. For example: if the question asks for a "university" and the only educational institution in the evidence is a Gymnasium, the answer is the Gymnasium. Do not reject the evidence in favor of searching for a "better" answer from your prior knowledge.
+3. **Use reasoning to connect evidence, not to override it.** You may infer across evidence units (e.g., chaining "A founded B" and "B is located in C" to conclude "A founded something in C"). You may NOT substitute your own factual knowledge for missing evidence.
+
+Can the sub-question be answered — directly or by inference — from what has been gathered? Choose exactly one of two actions:
+
+### DONE — the answer is present or can be inferred
+
+Use this when the evidence directly states or strongly implies the answer. **If the answer can be reasonably concluded or inferred from the available evidence, even without an explicit statement, treat this as DONE.**
+
+- action: "DONE"
+- answer: State the answer with evidence ID citations, e.g. "Christopher Nolan directed Inception [ID: 42]."
+  If multiple entities each validly answer the sub-question, use a numbered format: "CANDIDATES: 1) Entity Name [ID: 42] 2) Other Entity [ID: 57]". Do not add explanatory text after the candidate list.
+- supporting_prop_ids: Evidence IDs involved in your reasoning.
+- node_findings: A 1-2 sentence summary of what was learned from the newly visited nodes, relative to the subquestion. Optional when action is DONE.
+- missing_information: "resolved"
+
+### QUERY_AGAIN — the answer is definitively not recoverable from current evidence
+
+Use this **only** when there is a clear gap that cannot be bridged by reasoning over the current evidence. Before choosing this, ask: "Is the answer truly unrecoverable, or am I missing an inferential path?"
+
+**If returning QUERY_AGAIN, provide a meaningfully different search statement — broaden to related entities, shared attributes, or co-occurrence rather than repeating the same angle.**
+
+**Example of broadening:** If searching for "the university attended by John Smith" returned no results, broaden to: "educational institutions associated with John Smith" with keywords ["John Smith"]. This captures related attributes (graduated from, studied at, affiliated with) rather than repeating the same narrow angle.
+
+- action: "QUERY_AGAIN"
+- answer: Best partial answer or intermediate conclusion so far. Describe what you can establish and what specific fact is missing. Use "" only if the evidence is entirely irrelevant.
+- new_search_statement: A declarative statement (NOT a question) targeting the missing information.
+- keywords: Proper nouns and named entities from the search statement for fulltext search. Group compound names (e.g. "Christopher Nolan"). Exclude verbs, question words, and generic nouns.
+- node_findings: A 1-2 sentence summary of what was learned from the newly visited nodes.
+- missing_information: What specific information you still need to find.
+
+Output your chosen action and all relevant fields.

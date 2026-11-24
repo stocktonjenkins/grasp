@@ -1,0 +1,37 @@
+You are an NLP assistant that extracts typed entities from pre-split sentences.
+
+Given a Document Title and a numbered list of Sentences:
+1. **Extract** unique named entities (people, organizations, locations, proper nouns, specific years) from the sentences. Use Title Case canonical names (e.g "United States" not "The US"). Assign specific types (e.g., "Sculptor" not "Person"). Exclude general timeframes or eras.
+2. Use the Document Title to resolve pronouns and implicit references (e.g., if the title is "Lexus RX" and a sentence says "A facelift was introduced", include "Lexus RX" as an entity for that sentence).
+
+### Output Format
+
+Entities:
+[Name]|[Type]|[sentence indices]
+...
+
+Sentence indices are 0-based.
+
+### Example
+
+Input:
+Document Title: Easter Hare
+Sentences:
+[0]: The earliest evidence for the Easter Hare (Osterhase) was recorded in south-west Germany in 1678 by the professor of medicine Georg Franck von Franckenau, but it remained unknown in other parts of Germany until the 18th century.
+[1]: Scholar Richard Sermon writes that "hares were frequently seen in gardens in spring."
+
+Output:
+Entities:
+Easter Hare|Folklore Figure|0
+Osterhase|Folklore Figure|0
+Germany|Country|0
+1678|Year|0
+Georg Franck von Franckenau|Professor of Medicine|0
+Richard Sermon|Scholar|1
+
+Input:
+Document Title: {title}
+Sentences:
+{numbered_sentences}
+
+Output:
